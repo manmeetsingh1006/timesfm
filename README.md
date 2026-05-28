@@ -93,6 +93,59 @@ Since the Sept. 2025 launch, the following improvements have been completed:
 -   [Install Jax](https://docs.jax.dev/en/latest/installation.html#installation)
     for Flax.
 
+## Docker
+
+Build and run the backend and frontend together with Docker Compose:
+
+```bash
+cd timesfm
+docker compose up --build
+```
+
+The backend listens on `http://localhost:8000` and the frontend is served on
+`http://localhost:3000`.
+
+If your model weights require Hugging Face authentication, set:
+
+```bash
+export HF_TOKEN="your_hf_token"
+```
+
+If you want to require an API key for forecast requests, also set:
+
+```bash
+export TIMESFM_API_KEY="your_secret_key"
+```
+
+Then start Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+Forecast requests will then require either:
+
+- `X-API-Key: your_secret_key`
+- `Authorization: Bearer your_secret_key`
+
+### Frontend only
+
+To build only the React UI container:
+
+```bash
+cd timesfm/web
+docker build -t timesfm-frontend .
+```
+
+### Backend only
+
+To build only the backend container:
+
+```bash
+cd timesfm
+docker build -t timesfm-backend .
+```
+
 ### Code Example
 
 ```python

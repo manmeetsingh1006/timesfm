@@ -1,0 +1,150 @@
+body {
+  font-family: Inter, Roboto, Arial, sans-serif;
+  margin: 20px;
+  background: #f3f7ff;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.hero p {
+  margin: 0;
+  color: #475569;
+  max-width: 640px;
+}
+
+.status-box {
+  border: 1px solid #dbeafe;
+  background: #eff6ff;
+  padding: 16px;
+  border-radius: 14px;
+  min-width: 220px;
+}
+
+.error {
+  margin-top: 10px;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.card,
+.chart-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.card h2,
+.chart-card h2 {
+  margin-top: 0;
+}
+
+.file-upload {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.file-upload input {
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+label input[type='number'] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.meta {
+  margin: 6px 0;
+  color: #475569;
+}
+
+.preview {
+  margin-top: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.preview pre {
+  margin: 0;
+  overflow-x: auto;
+  font-size: 0.95rem;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+button.primary {
+  width: 100%;
+}
+
+.download-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.download-row button {
+  flex: 1 1 calc(33% - 10px);
+  min-width: 120px;
+  background: #0f172a;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .download-row button {
+    flex: 1 1 100%;
+  }
+}
