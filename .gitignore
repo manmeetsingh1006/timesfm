@@ -9,3 +9,5 @@ results/
 uv.lock
 development_setup.md
 debug.log
+
+.DS_Store
